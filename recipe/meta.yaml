@@ -10,7 +10,7 @@ source:
   sha256: d0aa7f439c7231275dddbf61ea2c9da8ca6c67e270fb4a1771f1ffd394a18e55
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
@@ -20,7 +20,7 @@ requirements:
     - python  >=3.6,<3.9
   run:
     - gensim  >=3.8
-    - matplotlib  >=3.1.1
+    - matplotlib-base  >=3.1.1
     - networkx  >=2.4
     - numba  >=0.48.0
     - numpy  >=1.17.1
