@@ -1,5 +1,5 @@
 {% set name = "deeprobust" %}
-{% set version = "0.2.4" %}
+{% set version = "0.2.8" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/deeprobust-{{ version }}.tar.gz
-  sha256: 8722ea5f6d82c9658d9af9ad99da434369e28274268782ca20f92acf96d3a748
+  sha256: 4a615d0e27c71d1f226ee28055f166de472b48038fd631378d39ef3d23eceda1
 
 build:
   number: 0
