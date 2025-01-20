@@ -7,18 +7,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/deeprobust-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/deeprobust-{{ version }}.tar.gz
   sha256: 8722ea5f6d82c9658d9af9ad99da434369e28274268782ca20f92acf96d3a748
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >3.6
+    - python {{ python_min }}
   run:
     - gensim >=3.8,<4.0
     - matplotlib-base >=3.1.1
@@ -26,7 +26,7 @@ requirements:
     - numba >=0.48.0
     - numpy >=1.17.1
     - pillow >=7.0.0
-    - python >3.6
+    - python >={{ python_min }}
     - scikit-image >=0.0
     - scikit-learn >=0.22.1
     - scipy >=1.3.1
@@ -44,6 +44,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/deeprobust/
